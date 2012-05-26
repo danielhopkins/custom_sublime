@@ -1,0 +1,6 @@
+[
+	{
+		"caption": "Toggle Gutter",
+		"command": "toggle_gutter"
+	}
+]
