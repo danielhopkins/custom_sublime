@@ -2,5 +2,9 @@
 	{
 		"caption": "Toggle Gutter",
 		"command": "toggle_gutter"
-	}
+	},
+  {
+    "caption": "Toggle Dark/Light",
+    "command": "toggle_dark_light"
+  }
 ]

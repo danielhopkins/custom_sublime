@@ -8,3 +8,15 @@ class ToggleGutterCommand(sublime_plugin.TextCommand):
 
     for v in self.view.window().views():
       v.settings().set("gutter", not first_setting)
+
+class ToggleDarkLightCommand(sublime_plugin.WindowCommand):
+  def run(self):
+    first_setting = self.window.views()[0].settings().get("color_scheme").find("Light")
+
+    new_setting   = "Packages/Color Scheme - Default/Solarized (Light).tmTheme"
+    if first_setting != -1:
+      new_setting = "Packages/Color Scheme - Default/Solarized (Dark).tmTheme"
+
+    for v in self.window.views():
+      v.settings().set("color_scheme", new_setting)
+
